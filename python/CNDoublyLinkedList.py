@@ -33,6 +33,17 @@ class DoublyLinkedList(LinkedList):
 			currentNode.next = newNode
 			newNode.prev = currentNode
 			self.tail = newNode
+
+	def insertFront(self, newNode):
+		'''
+		Inserts a new node at the front (head) of the list.
+		'''
+		if (self.head == None):
+			self.head = newNode
+		else:
+			newNode.next = self.head
+			self.head.prev = newNode
+			self.head = newNode
 	
 	def remove(self, node):
 		'''
@@ -50,7 +61,7 @@ class DoublyLinkedList(LinkedList):
 				
 			while (currentNode != None):
 				if (node == currentNode):
-					break;
+					break
 				prevNode = currentNode
 				currentNode = currentNode.next
 		

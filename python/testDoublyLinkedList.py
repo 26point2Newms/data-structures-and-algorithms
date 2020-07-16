@@ -170,7 +170,18 @@ class Test(unittest.TestCase):
 		self.assertEqual(currentNode.info, "item 1", "testRemove method failed.")
 		currentNode = currentNode.prev
 		self.assertEqual(currentNode, None, "testRemove method failed.")
-		
+
+	def testInsertFront(self):
+		failedMsg = "testInsertFront method failed."
+		self.linkedList.insertFront(Node("Item A"))
+		self.assertEqual(self.linkedList.head.info, "Item A", failedMsg)
+		self.linkedList.insertFront(Node("Item B"))
+		self.assertEqual(self.linkedList.head.info, "Item B", failedMsg)
+
+		self.testPrint("testInsertFront")
+		self.testPrintReverse("testInsertFront")
+
 
 if __name__ == "__main__":
 	unittest.main()
+
