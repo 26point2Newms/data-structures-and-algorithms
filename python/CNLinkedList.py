@@ -48,7 +48,7 @@ class LinkedList(object):
 					
 			while (currentNode != None):
 				if (node == currentNode):
-					break;
+					break
 				prevNode = currentNode
 				currentNode = currentNode.next
 			
