@@ -2,5 +2,6 @@
 .pydevproject
 .DS_Store
 .metadata
+.vscode
 __pycache__
 
