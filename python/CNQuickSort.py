@@ -5,8 +5,6 @@ Created on Aug 3, 2020
 https://github.com/26point2Newms
 '''
 
-import statistics
-
 def sort(lst):
 	__quick(lst, 0, len(lst) - 1)
 
