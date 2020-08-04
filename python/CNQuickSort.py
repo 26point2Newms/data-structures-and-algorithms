@@ -47,23 +47,18 @@ def __partition(lst, lb, ub):
 	# This is the pivot value, an area where we can experiment, such 
 	#	as using the median of lst[lb], lst[ub], and the middle, lst[(lb+ub)/2].
 	#	Or we can use lst[lb] or lst[up]
-	# Pick one and comment the others out.
+	# Pick one and comment the other one out.
 	# pivot = lst[lb]	# Using the lower bound as the pivot
 	pivot = lst[ub]	# Using the upper bound as the pivot
 	
-	up = ub
-	down = lb
-	while (down < up):
-		while (lst[down] <= pivot and down < ub):
-			down += 1	# move up the array
-		while (lst[up] > pivot):
-			up -= 1		# move down the array
-		if (down < up):
-			# interchange lst[down] and lst[up]
-			temp = lst[down]
-			lst[down] = lst[up]
-			lst[up] = temp
-	lst[lb] = lst[up]
-	lst[up] = pivot
-	return up
+	i = lb - 1	# this is index of the smaller element
+
+	for j in range(lb, ub):
+		# Is the current element smaller or equal to the the pivot?
+		if lst[j] <= pivot:
+			# Increment the index of the smaller element
+			i += 1
+			lst[i], lst[j] = lst[j], lst[i]
+	lst[i+1], lst[ub] = lst[ub], lst[i+1]
+	return (i + 1)
 
