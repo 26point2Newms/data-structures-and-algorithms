@@ -40,7 +40,7 @@ class Test(unittest.TestCase):
 		while (currentNode != None):
 			if (currentNode.info == "item three"):
 				self.linkedList.remove(currentNode)
-				break;
+				break
 			currentNode = currentNode.next
 		self.testPrint()
 		
@@ -72,7 +72,7 @@ class Test(unittest.TestCase):
 		while (currentNode != None):
 			if (currentNode.info == "item four"):
 				self.linkedList.remove(currentNode)
-				break;
+				break
 			currentNode = currentNode.next
 		self.testPrint()
 		

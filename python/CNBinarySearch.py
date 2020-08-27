@@ -28,7 +28,7 @@ class BinarySearch(object):
 	def __quickSearch(self, low, high):
 		'''
 		Recursive binary search implementation. If this was not 
-		a class we would need to either make the list we searching
+		a class we would need to make the list we're searching
 		and the target value we're searching for global to avoid
 		placing them on the stack for each recursion.
 

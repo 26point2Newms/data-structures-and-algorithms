@@ -51,7 +51,7 @@ class Test(unittest.TestCase):
 		while (currentNode != None):
 			if (currentNode.info == "item 3"):
 				self.linkedList.remove(currentNode)
-				break;
+				break
 			currentNode = currentNode.next
 		self.testPrint("testRemove")
 		self.testPrintReverse("testRemove")
@@ -114,7 +114,7 @@ class Test(unittest.TestCase):
 		while (currentNode != None):
 			if (currentNode.info == "item 5"):
 				self.linkedList.remove(currentNode)
-				break;
+				break
 			currentNode = currentNode.next
 		self.testPrint("testRemoveLastNode")
 		self.testPrintReverse("testRemoveLastNode")
