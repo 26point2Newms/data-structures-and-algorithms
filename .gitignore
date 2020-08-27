@@ -3,5 +3,6 @@
 .DS_Store
 .metadata
 .vscode
+*.code-workspace
 __pycache__
 
